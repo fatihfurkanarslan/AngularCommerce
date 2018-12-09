@@ -1,0 +1,9 @@
+<ul class="list-group">
+
+<li class="list-group-item" click="onSelect(category)" *ngFor="let category of categories" routerLink="products/{{category.seoUrl}}" routerLinkActive="active">
+
+{{category.categoryName}}
+
+</li>
+
+</ul>

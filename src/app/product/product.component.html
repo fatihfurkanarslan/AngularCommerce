@@ -1,0 +1,18 @@
+
+<div>
+  <input class="form-control" type="text" placeholder="filter text.." [(ngModel)]="filterText">
+
+</div>
+
+<div>
+    <ul class="list-group">
+      <li *ngFor="let product of products |productFilter:filterText" class="list-group-item">
+        <button (click)="addToCart(product)" class="btn-sm btn btn-outline-primary float-right">
+          <i class="glyphicon glyphicon-plus"><strong>+</strong></i>
+          add to cart</button>
+          <h4>{{product.productName}}</h4>
+          <p>{{product.unitPrice}}</p>
+    
+      </li>
+    </ul>
+    </div>
